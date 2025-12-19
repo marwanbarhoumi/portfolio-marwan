@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
+import "./style/Home.css"; 
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -15,10 +15,8 @@ function App() {
     <div className={darkMode ? 'bg-dark text-light' : 'bg-light text-dark'} style={{ minHeight: '100vh' }}>
       <Router>
         <Navbar />
-        <div className="container py-3">
-          <button onClick={() => setDarkMode(!darkMode)} className="btn btn-secondary mb-3">
-            {darkMode ? 'Mode clair' : 'Mode sombre'}
-          </button>
+        <div className="container-py-3">
+         
 
           <Routes>
             <Route path="/" element={<Home />} />
